@@ -1,0 +1,23 @@
+{
+  "name": "change-prefix-loader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "yalc publish",
+    "test": "node tests"
+  },
+  "author": "154211320@qq.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/generator": "^7.16.0",
+    "@babel/parser": "^7.16.4",
+    "@babel/traverse": "^7.16.3",
+    "loader-runner": "^4.2.0",
+    "loader-utils": "^3.2.0"
+  },
+  "dependencies": {
+    "element-ui": "^2.15.6"
+  }
+}
