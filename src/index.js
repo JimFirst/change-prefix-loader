@@ -59,8 +59,9 @@ function handleSource(source, prefix, replace) {
           // 普通字符串替换
           if (typeof node.value === 'string' && node.value.indexOf(prefix) !== -1 && !canChange(path)) {
             if (node.value !== 'el-menu-collapse-transition') { // TODO 先特殊处理这个内部组件
-              const reg = new RegExp(`(^|(\s)+)${prefix}(?!icon)`, 'g')
-              node.value = node.value.replace(reg, `$2${replace}` )
+              const reg = new RegExp(`(^|(\\s)+|(\.)+)${prefix}(?!icon)`, 'g')
+              // const reg = new RegExp(`(^|(\\s)+)el-(?!icon)`, 'g')
+              node.value = node.value.replace(reg, `$1${replace}` )
             }
           }
           path.replaceWith(node)

@@ -15,13 +15,20 @@ chainWebpack: config => {
         .include.add(path.resolve(__dirname, './node_modules/element-ui/lib'))
         .end()
         .use('change-prefix')
-        .options({
-            prefix: 'el-'   //可选
-            replace: 'gp-'  //可选
-        })
         .loader('change-prefix-loader')
         .end()
 },
+```
+
+### options
+
+* type Object
+
+```
+{
+    prefix: 'el-'   //可选
+    replace: 'gp-'  //可选
+})
 ```
 ## 注意
 
