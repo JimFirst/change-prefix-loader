@@ -15,9 +15,7 @@
     "@babel/parser": "^7.16.4",
     "@babel/traverse": "^7.16.3",
     "loader-runner": "^4.2.0",
-    "loader-utils": "^3.2.0"
+    "loader-utils": "^1.4.0"
   },
-  "dependencies": {
-    "element-ui": "^2.15.6"
-  }
+  "dependencies": {}
 }
