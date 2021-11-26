@@ -32,4 +32,4 @@ chainWebpack: config => {
 ```
 ## 注意
 
-该loader只会替换js中的class 前缀，css中的样式需要使用post-css替换
+该loader只会替换js中的class 前缀，css中的样式需要使用post-css替换，请见[postcss-change-css-prefix](https://www.npmjs.com/package/postcss-change-css-prefix)
