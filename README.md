@@ -8,16 +8,41 @@ npm i change-prefix-loader
 
 <!-- vue.config.js -->
 
-chainWebpack: config => {
-    config.module
-        .rule('change-prefix')
-        .test(/\.js$/)
-        .include.add(path.resolve(__dirname, './node_modules/element-ui/lib'))
-        .end()
-        .use('change-prefix')
-        .loader('change-prefix-loader')
-        .end()
-},
+module.exports = {
+    chainWebpack: config => {
+        config.module
+            .rule('change-prefix')
+            .test(/\.js$/)
+            .include.add(path.resolve(__dirname, './node_modules/element-ui/lib'))
+            .end()
+            .use('change-prefix')
+            .loader('change-prefix-loader')
+            .end()
+    },
+}
+```
+```
+vue cli2
+
+npm i change-prefix-loader
+
+<!-- build/webpack.base.conf.js -->
+module.exports = {
+    module: {
+        rules: {
+            <!-- 新增该rule -->
+            {
+                test: /\.js$/,
+                loader: 'change-prefix-loader',
+                include: path.resolve(__dirname, '../node_modules/element-ui/lib'),
+                options: {
+                    replace: 'gp-',
+                }
+            }
+        }
+    }
+}
+
 ```
 
 ### options
@@ -28,7 +53,7 @@ chainWebpack: config => {
 {
     prefix: 'el-'   //可选
     replace: 'gp-'  //可选
-})
+}
 ```
 ## 注意
 
