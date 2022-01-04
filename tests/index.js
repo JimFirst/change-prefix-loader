@@ -3,7 +3,7 @@ const Path = require('path')
 const LoaderRunner = require('loader-runner')
 
 LoaderRunner.runLoaders({
-  resource: resolve('../node_modules/element-ui/lib/select.js'),
+  resource: resolve('../node_modules/element-ui/lib/element-ui.common.js'),
   loaders: [resolve('../src/index.js?replace=gt-')],
   context: { minimize: true },
 	// processResource: (loaderContext, resourcePath, callback) => { },

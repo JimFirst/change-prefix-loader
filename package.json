@@ -1,6 +1,6 @@
 {
   "name": "change-prefix-loader",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "a loader to change element-ui class prefix",
   "main": "src/index.js",
   "scripts": {
@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/JimFirst/change-prefix-loader#readme",
   "devDependencies": {
+    "element-ui": "^2.15.6",
     "loader-runner": "^4.2.0",
     "loader-utils": "^1.4.0"
   },
