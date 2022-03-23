@@ -3,8 +3,8 @@ a loader to change element-ui class prefix
 
 ### 快速上手
 ```
-vue cli3 
-npm i change-prefix-loader
+vue cli3及以上
+npm i change-prefix-loader -D
 
 <!-- vue.config.js -->
 
@@ -17,6 +17,10 @@ module.exports = {
             .end()
             .use('change-prefix')
             .loader('change-prefix-loader')
+            .options({
+                prefix: 'el-',
+                replace: 'gp-'
+            })
             .end()
     },
 }
@@ -24,7 +28,7 @@ module.exports = {
 ```
 vue cli2
 
-npm i change-prefix-loader
+npm i change-prefix-loader -D
 
 <!-- build/webpack.base.conf.js -->
 module.exports = {
@@ -51,7 +55,7 @@ module.exports = {
 
 ```
 {
-    prefix: 'el-'   //可选
+    prefix: 'el-',  //可选
     replace: 'gp-'  //可选
 }
 ```

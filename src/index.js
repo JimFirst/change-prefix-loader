@@ -4,7 +4,7 @@ const parser = require('@babel/parser')
 const traverse = require('@babel/traverse').default
 const generate = require("@babel/generator").default
 module.exports = function changePrefixLoader(source) {
-  const { prefix = 'el-', replace = 'gt-' } = loaderUtils.getOptions(this) || {}
+  const { prefix = 'el-', replace = 'gp-' } = loaderUtils.getOptions(this) || {}
   const result = handleSource(source, prefix, replace)
   // writeFile(result.code)
   return result.code
