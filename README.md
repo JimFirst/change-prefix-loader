@@ -19,7 +19,8 @@ module.exports = {
             .loader('change-prefix-loader')
             .options({
                 prefix: 'el-',
-                replace: 'gp-'
+                replace: 'gp-',
+                exclude = 'icon'
             })
             .end()
     },
@@ -57,6 +58,7 @@ module.exports = {
 {
     prefix: 'el-',  //可选
     replace: 'gp-'  //可选
+    exclude: 'icon' // 可选，不替换el-icon, 默认为''
 }
 ```
 ## 注意
